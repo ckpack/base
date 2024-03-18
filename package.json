@@ -1,7 +1,7 @@
 {
   "name": "@ckpack/base",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "ckvv",
   "license": "ISC",
@@ -16,7 +16,9 @@
   "bin": {
     "verify-commit": "./dist/verify-commit.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint . --fix",
     "prepare": "npx simple-git-hooks",
