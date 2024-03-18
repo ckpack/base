@@ -1,0 +1,35 @@
+{
+  "name": "@ckpack/base",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "",
+  "author": "ckvv",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    "./tsconfig": "./tsconfig.json",
+    "./*": {
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
+    }
+  },
+  "bin": {
+    "verify-commit": "./dist/verify-commit.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "prepare": "npx simple-git-hooks",
+    "release": "standard-version",
+    "build": "tsup-node"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.8.1",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "simple-git-hooks": "^2.10.0",
+    "standard-version": "^9.5.0",
+    "tsup": "^8.0.2",
+    "typescript": "5.4.2"
+  }
+}
